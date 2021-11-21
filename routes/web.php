@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pos', ['catalog' => ['categories' => Category::with('products')->get()]]);
+});
+
+Route::get('/products', function() {
+    return Product::with('category')->get();
+});
+
+Route::get('/categories', function() {
+    return Category::with('products')->get();
 });

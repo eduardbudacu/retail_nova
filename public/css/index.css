@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#content {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#menu-container {
+    height: 400px; 
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+}
+.sidenav {
+    height: 400px; 
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: #363537; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.1s; /* 0.5 second transition effect to slide in the sidenav */
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 2px;
+}
+.sidenav a {    
+    padding: 8px 20px 8px 32px;
+    font-size: 16px;
+    display: block;
+    color: #F7F7F7;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #4BA0B5;
+  }
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 12px;}
+  } 
+#operations-container {
+    width: 964px;
+    height: 756px;
+    float: right;
+    margin-top: 14px;
+}
+h4 {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    size: 12px;
+    text-align: center;
+    font-weight: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    size: 14px;
+    text-align: left;
+}
+#keyboard {
+    width: 258px;
+    height: 247px;
+    border-radius: 4px;
+    border: 0.5px #eee solid;
+    float: left;
+    background-color: #D6EAEF;
+}
+#keyboard-result {
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.numeric-input {
+    width: 220px;
+    height: 40px;
+    background-color: #ffffff; 
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    border: 2px solid #D6EAEF;
+    border-radius: 8px;
+    padding: 20px;
+    text-align:right; 
+    vertical-align:middle;
+    margin: 0 auto;
+}
+.numeric-grid {
+    display: grid;
+    grid-template-columns: repeat(4,52px);
+    grid-auto-rows: 50px;
+    background: #D6EAEF;
+    grid-gap:4px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.numeric-grid > div {
+    background: #D6EAEF;
+    padding: 1px;   
+}
+.btn-keyboard {
+    width: 49px;
+    height: 49px;
+}
+.btn-delete {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+#catalog-container {
+    width: 670px;
+    height: 270px;
+    float: right;
+    background-color: white;
+    margin-right: 10px;
+}
+#catalog {
+    width: 596px;
+    height: 220px;
+    float: left;
+    margin-bottom: 10px;
+    overflow-y:scroll;
+    overflow: hidden;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    grid-auto-rows: minmax(104px, auto);
+    background-color: #fff;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+.btn-category {
+    width:120px;
+    height:92px;
+    font-size: 18px;
+}
+#catalog-navigation {
+    width:45px;
+    height:210px;
+}
+.navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 45px);
+    grid-auto-rows: minmax(35px, auto);
+    grid-gap: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.btn-up {
+   width: 45px;
+   height: 45px;
+   font-weight: bold;
+   padding: 5 5 8 5;
+   margin-top: 10px;
+   margin-bottom: 30px;
+  }
+.btn-exit {
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    padding: 5 5 5 5;
+}
+.btn-down {
+    width: 45px;
+    height: 45px;
+    font-weight: bold;
+    padding: 5 5 5 5;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.search {
+    width: 620px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#order-items {
+    width: 903px;
+    height: 300px;
+    /*border: 0.5px #fff solid;*/
+    clear: both;
+    /*margin-bottom: 10px;*/
+}
+.order-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 0.3fr 16px;
+    grid-auto-rows: minmax(36px, auto);
+    background-color:#363537;
+    padding-top: 8px;
+    padding-left: 6px;
+    align-items: left;
+    border-radius: 2px;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #fff;
+}
+.order-contents {
+    display: grid;
+    min-height: 40px;
+    height: 240px; 
+    grid-template-columns: 1fr 2fr 1fr 1fr 0.3fr;
+    grid-auto-rows: 40px;
+    padding-left: 6px;
+    align-items: left;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    overflow-y: scroll;
+    border:1px #D6EAEF solid;
+}
+.area {
+    height: 40px;
+}
+.payment-container {
+    height: 120px;
+    width: 904px;
+    border: 0.5px #fff solid;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(2, 452px);
+    grid-template-rows: 120px;
+    justify-content: center;
+    position: sticky;
+}
+.receipt {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 140px);
+    grid-auto-rows: minmax(50px, auto);
+    margin-top:10px;
+    color: #000000;
+    font-weight: 500;
+    align-items: left;
+    justify-content: left;
+}
+.receipt > div:nth-child(1) {
+    padding-left: 10px;
+    padding-top: 8px;
+    background-color: #F6C244;	
+    
+}
+.receipt > div:nth-child(2) {
+    padding-left: 10px;
+    padding-top: 8px;
+    background-color: #F6C244;	
+}
+.receipt > div:nth-child(3) {
+    padding-left: 10px;
+    padding-top: 8px;
+    background-color: #F6C244;	
+}
+.receipt > div:nth-child(4) {
+    color: #000;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: 1px #D6EAEF solid;
+  }
+  .receipt > div:nth-child(5) {
+    border: 1px #D6EAEF solid;
+    color: #000;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+  .receipt > div:nth-child(6) {
+    border: 1px #D6EAEF solid;
+    color: #000;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.btn-pay {
+    width: 140px;
+    height: 100px;
+    margin-left: 6px;
+    margin-top: 10px;
+}

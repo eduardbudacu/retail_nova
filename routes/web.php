@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Product;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,4 @@ Route::get('/products', function() {
 Route::get('/categories', function() {
     return Category::with('products')->get();
 });
+
